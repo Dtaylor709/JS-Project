@@ -10,8 +10,13 @@ export const fetchPeopleController = async function (req,res) {
     }
 };
 
-export const fetchPersonController = function (req,res) {
+export const fetchPersonController = async function (req,res) {
     let personId = req.params.id;
-    const personData = fetchPerson(personId);
-    res.render('profile', { person: personData });
+    const personData = await fetchPerson(personId);
+    console.log(personData)
+    if (personData) {
+        res.render('profile', { person: personData });
+    } else {
+        res.send("Not authorized.")
+    }
 };
