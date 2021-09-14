@@ -41,3 +41,14 @@ export const fetchPerson = async function (id) {
 //     });
 //     return person;
 };
+
+export const createPerson =  async function(formData) {
+    const response = await fetch(`${API_URL}people`, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            Authorization: `Token ${API_KEY}`,
+        }
+    });
+    return response.json();
+}
