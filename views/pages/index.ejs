@@ -1,4 +1,8 @@
 <%- include("../partials/_head") -%>
+<% if (user !== null) { %>
+<p>You are logged in as <%= user.username %></p>
+<% } %>
+
         <h1>Women in Tech</h1>
 
         <form id="search-form" action="/" method="GET">
