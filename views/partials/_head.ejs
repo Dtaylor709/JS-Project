@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-          <meta charset="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>Women in Tech</title>
-          <meta name="description" content="Showcasing women in tech." />
-          <meta name="author" content="your name" />
-          <link rel="stylesheet" href="/stylesheets/styles.css" />
+      <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <title>Women in Tech</title>
+            <meta name="description" content="Showcasing women in tech." />
+            <meta name="author" content="your name" />
+            <link rel="stylesheet" href="/stylesheets/styles.css" />
+            <div class="header_inner">
+                  <div class="logo"> 
+                        <img src="images/Logo.png" alt="logo">
+                        </div> 
+
+                  <ul class="Navbar" id="TopNavbar">
+                        <li><a href="http://127.0.0.1:3000" class="active">Home</a></li>
+                        <% if (user !== null) { %>
+                        <li><a href="http://127.0.0.1:3000/profile">Publish</a></li>
+                        <li><a href="http://127.0.0.1:3000/logout">Logout</a></li>
+                        <% } else { %>
+                        <li><a href="http://127.0.0.1:3000/login">Login</a></li>
+                        <li><a href="http://127.0.0.1:3000/create-account">Create Account</a></li>
+                        <% } %>
+                        </ul>
+            </div>
+
+
+
     </head>
-    <body>

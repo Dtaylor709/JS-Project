@@ -2,7 +2,7 @@
 <% if (user !== null) { %>
 <p>You are logged in as <%= user.username %></p>
 <% } %>
-
+    <body>
         <h1>Women in Tech</h1>
 
         <form id="search-form" action="/" method="GET">
@@ -10,10 +10,21 @@
             <input type="submit" value="Search" />
         </form>
 
-          <% people.forEach(person => { %>
-            <a href="/profile/<%= person.id %>">
-                <p><%= person.name %></p>
-            </a>
+        <div class="wrapper">
+            <div><% people.forEach(person => { %>
+                <a href="/profile/<%= person.id %>">
+                    <img class="thumb_img" src=<%= person.photo %>>
+                    <h3 class="thumb_title"><%= person.name %></h3>
+            </div>
+                        
+                        
         <% }) %>
-    </body>
-</html>
+            </section>
+
+        </section>
+
+    
+            </body>   
+
+
+<%- include("../partials/_footer") -%>

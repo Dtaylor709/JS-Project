@@ -25,18 +25,36 @@ export const fetchPeopleController = async function (req,res) {
 };
 
 export const fetchPersonController = async function (req,res) {
+    let user;
+    if (req.isAuthenticated()) {
+        user = {
+            id: req.user.rows[0].id,
+            username: req.user.rows[0].username,
+        };
+    } else {
+        user = null;
+    }
     let personId = req.params.id;
     const personData = await fetchPerson(personId);
     console.log(personData)
     if (personData) {
-        res.render('profile', { person: personData });
+        res.render('profile', { person: personData, user:user });
     } else {
         res.send("Not authorized.")
     }
 };
 
 export const createPersonFromController = function (req,res) {
-    res.render('newProfile')
+    let user;
+    if (req.isAuthenticated()) {
+        user = {
+            id: req.user.rows[0].id,
+            username: req.user.rows[0].username,
+        };
+    } else {
+        user = null;
+    }
+    res.render('newProfile', { person: personData, user:user })
 }
 
 export const createPersonController = async function (req, res) {
@@ -47,7 +65,15 @@ export const createPersonController = async function (req, res) {
     form.append('bio', personData.bio);
     const fileStream = fs.createReadStream(req.file.path);
     form.append('photo', fileStream, req.file.originalname);
-
+    let user;
+    if (req.isAuthenticated()) {
+        user = {
+            id: req.user.rows[0].id,
+            username: req.user.rows[0].username,
+        };
+    } else {
+        user = null;
+    }
     let newPerson;
     try {
           newPerson = await createPerson(form);
@@ -55,8 +81,9 @@ export const createPersonController = async function (req, res) {
           console.log(err);
     }
     if (newPerson) {
-          res.render('profile', { person: newPerson });
+          res.render('profile', { person: newPerson, user:user  });
     } else {
           res.send('Error.');
     }
 };
+

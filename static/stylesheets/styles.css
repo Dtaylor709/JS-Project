@@ -1,3 +1,267 @@
-html {
-    background-color: lightblue;
+body, html {
+    height: 100%;
 }
+
+html {
+    display: block;
+    background-color: white;
+    font-family: 'Hind', sans-serif;
+}
+
+body {
+    height: 100%;
+    display: block;
+}
+
+body, button, input, select, table, textarea {
+    font-size: 12px;
+    font-family: hind,simhei,verdana,Helvetica,sans-serif;
+}
+
+body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Overall header */
+
+#header {
+    position: relative;
+    z-index: 210;
+    height: 100px;
+    margin-bottom: -100px;
+    background: #fff;
+}
+
+.header_inner {
+    position: relative;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+div {
+    display: block;
+}
+
+/* //Overall header */
+
+/* logo */
+
+.logo {
+    float: left;
+    height: 100px;
+    margin: 13px 0 0 25px;
+    background-repeat: no-repeat;
+    background-position: -84px -677px;
+    width: 77px;
+    height: 74px;
+}
+/* //logo */
+
+/* Navbar */
+nav {
+    display: block;
+}
+
+.Navbar {
+    float: left;
+    padding: 40px 0 0 36px;
+    height: 60px;
+    vertical-align: top;
+}
+.Navbar li:first-child {
+    padding-left: 0;
+}
+
+.Navbar li {
+    float: left;
+    position: relative;
+    padding: 0 18px;
+}
+
+.Navbar li a {
+    display: block;
+    font-size: 20px;
+    line-height: 22px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+/* //Navbar */
+
+/* Home page biographies */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+  }
+  
+.thumb_img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.thumb_title {
+    font-size: 20px;
+    padding: 20px;
+}
+
+/* //Home page biographies */
+
+
+
+
+/* overall footer styling */
+#footer {
+    position: relative;
+    min-height: 405px;
+    margin-top: -406px;
+    border-top: 1px solid #e5e5e5;
+    background: #f5f5f5;
+}
+
+li, ol, ul {
+    list-style: none;
+}
+
+ul {
+    display: block;
+    /* list-style-type: disc; */
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+/* // overall footer styling */
+
+/* footer styling social media icons*/
+
+#footer_SocialMediaIcons {
+    margin-top: 38px;
+    text-align: center;
+}
+
+.footer_SocialMediaIcons li:first-child {
+    margin-left: 0;
+}
+
+.footer_SocialMediaIcons li {
+    display: inline-block;
+    margin-left: 30px;
+    vertical-align: top;
+}
+
+
+
+.foot_facebook, .foot_instagram, .foot_twitter, .foot_youtube  {
+    background-repeat: no-repeat;
+    /* ensures background imge doesn't repeat */
+    height: 20px;
+}
+
+.foot_facebook {
+    background-position: -915px -774px;   
+    width: 18px;
+    height: 18px;
+}
+
+.foot_instagram {
+    background-position: -984px -614px;
+    width: 20px;
+}
+
+.foot_twitter {
+    background-position: -984px -446px;
+    width: 22px;
+}
+
+.foot_youtube {
+    background-position: -836px -919px;
+    width: 26px;
+}
+
+/* //footer styling social media icons*/
+
+/* footer styling links*/
+.foot_menu {
+    position: relative;
+    padding-top: 29px;
+    text-align: center;
+}
+
+.foot_menu li {
+    display: inline-block;
+    height: 15px;
+    vertical-align: top;
+}
+
+.foot_menu .bar {
+    margin: 0 16px;
+}
+
+.bar {
+    display: inline-block;
+    overflow: hidden;
+    width: 1px;
+    height: 16px;
+    background: #d6d6d6;
+    line-height: 999px;
+    vertical-align: top;
+}
+
+.foot_menu a {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+a {
+    color: #000;
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* // footer styling links*/
+
+
+/* footer styling copyright */
+
+.copyright {
+    position: relative;
+    padding-top: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #c5c5c5;
+    text-align: center;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.foot_logo {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.icon_foot_logo {
+    background-position: -756px -758px;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 36px;
+}
+/* //footer styling copyright */
