@@ -30,14 +30,18 @@ body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend,
     position: relative;
     z-index: 210;
     height: 100px;
+    width: 100%;
     margin-bottom: -100px;
     background: #fff;
 }
 
 .header_inner {
+    display: flex;
     position: relative;
     max-width: 1680px;
     margin: 0 auto;
+    justify-content: space-between;
+    padding-bottom: 25px;
 }
 
 div {
@@ -49,13 +53,12 @@ div {
 /* logo */
 
 .logo {
-    float: left;
-    height: 100px;
-    margin: 13px 0 0 25px;
+    display: flex;
+    margin: 10px 0 0 25px;
     background-repeat: no-repeat;
     background-position: -84px -677px;
-    width: 77px;
-    height: 74px;
+    height: 100px;
+    align-items: left;
 }
 /* //logo */
 
@@ -70,9 +73,6 @@ nav {
     height: 60px;
     vertical-align: top;
 }
-.Navbar li:first-child {
-    padding-left: 0;
-}
 
 .Navbar li {
     float: left;
@@ -80,37 +80,118 @@ nav {
     padding: 0 18px;
 }
 
-.Navbar li a {
-    display: block;
-    font-size: 20px;
-    line-height: 22px;
-    cursor: pointer;
+.log_in_out {display: inline-block;
+    width: 104px;
+    height: 33px;
+    border-radius: 17px;
+    background: #2f2f2f;
+    line-height: 35px;
+    text-align: center;
+    vertical-align: top;
+    font-size: 14px;
     font-weight: 500;
+    color: #fff;
+}
+
+.create-account_button {
+    display: inline-block;
+    width: 150px;
+    height: 31px;
+    margin-left: 4px;
+    border: 1px solid #b4b4b4;
+    border-radius: 17px;
+    background: #fff;
+    line-height: 33px;
+    text-align: center;
+    vertical-align: top;
+    font-size: 14px;
+    font-weight: 700;
+    color: #838383;
+}
+
+.create-account_button:hover {
+    color: white;
+    background-color:#432581;
+
+}
+
+.publish {
+    display: inline-block;
+    line-height: 33px;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    font-weight: 700;
+    padding-right: 20px;
+
+}
+
+.publish:hover {
+    color:#432581;
+    
+}
+.material-icons {
+    margin: 0 10px;
 }
 
 
 /* //Navbar */
+
+/* Home image, title and search bar */
+.home_pg_image {
+    width: 100%;
+    height: 70%;
+}
+
+/* Home image, title and search bar */
 
 /* Home page biographies */
 
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 200px;
+    grid-auto-rows: auto;
+    margin: 200px;
   }
-  
+
+.wrapper_item {
+    height: 300px;
+    width: 300px;
+
+}
+
+
 .thumb_img {
     border-radius: 50%;
     height: 200px;
     width: 200px;
     object-fit: cover;
     object-position: center;
+   
+}
+
+.thumb_img:hover {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    transition-duration: .5s;
+    transition-property: transform;
+    transform: scale3d(.83,.83,.83);
 }
 
 .thumb_title {
     font-size: 20px;
-    padding: 20px;
+    padding-top: 20px;
+    height: 50px;
+    
 }
+
+.thumb_title:hover {
+    color:#432581;
+}
+
+
 
 /* //Home page biographies */
 

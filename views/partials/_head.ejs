@@ -7,21 +7,25 @@
             <meta name="description" content="Showcasing women in tech." />
             <meta name="author" content="your name" />
             <link rel="stylesheet" href="/stylesheets/styles.css" />
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <div class="header_inner">
-                  <div class="logo"> 
-                        <img src="images/Logo.png" alt="logo">
-                        </div> 
+                  <a href="/"> 
+                        <img class="logo" src="images/Logo.png" alt="logo">
+                  </a>
 
-                  <ul class="Navbar" id="TopNavbar">
-                        <li><a href="/" class="active">Home</a></li>
+                  <div class="Navbar" id="TopNavbar">
                         <% if (user !== null) { %>
-                        <li><a href="/profile">Publish</a></li>
-                        <li><a href="/logout">Logout</a></li>
+                              <p>You are logged in as <%= user.username %></p>
+                              <% } %>
+                        <% if (user !== null) { %>
+                        <a href="/profile" class="publish"> 
+                              <span class="material-icons">menu_book</span>Publish</a>
+                        <a href="/logout" class="log_in_out">Logout</a>
                         <% } else { %>
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/create-account">Create Account</a></li>
+                        <a href="/login" class="log_in_out">Login</a>
+                        <a href="/create-account" class="create-account_button">Create Account</a>
                         <% } %>
-                        </ul>
+                        </div>
             </div>
 
 

@@ -1,9 +1,12 @@
 <%- include("../partials/_head") -%>
-<% if (user !== null) { %>
-<p>You are logged in as <%= user.username %></p>
-<% } %>
+
     <body>
-        <h1>Women in Tech</h1>
+        <div>
+            <img class="home_pg_image" src="images/HomePage_img.jpg">
+            <h1>Women in Tech</h1>
+
+        </div>
+        
 
         <form id="search-form" action="/" method="GET">
             <input name="name" id="name-query" type="text" />
@@ -11,18 +14,12 @@
         </form>
 
         <div class="wrapper">
-            <div><% people.forEach(person => { %>
-                <a href="/profile/<%= person.id %>">
-                    <img class="thumb_img" src=<%= person.photo %>>
-                    <h3 class="thumb_title"><%= person.name %></h3>
-            </div>
-                        
-                        
+        <% people.forEach(person => { %>
+            <div class="wrapper_item"><a href="/profile/<%= person.id %>">
+                <img class="thumb_img" src=<%= person.photo %>>
+                <h3 class="thumb_title"><%= person.name %></h3></a></div>              
         <% }) %>
-            </section>
-
-        </section>
-
+        </div>
     
             </body>   
 
