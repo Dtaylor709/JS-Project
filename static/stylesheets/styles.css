@@ -139,8 +139,36 @@ nav {
 /* Home image, title and search bar */
 .home_pg_image {
     width: 100%;
-    height: 70%;
 }
+.container1 {
+    position: relative;
+  }
+  
+  
+  .text-block {
+    position: absolute;
+    top: 200px;
+    left: 30px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); 
+    color: #f1f1f1; 
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+.about-heading {
+    font-family: 'Roboto', sans-serif;  
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 50px;
+    color:#583d72;
+  }
+
+  .heading-block {
+    font-family: 'Roboto', sans-serif;  
+    font-weight: bold;
+  }
 
 /* Home image, title and search bar */
 

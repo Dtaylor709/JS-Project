@@ -1,17 +1,30 @@
 <%- include("../partials/_head") -%>
 
     <body>
-        <div>
-            <img class="home_pg_image" src="images/HomePage_img.jpg">
-            <h1>Women in Tech</h1>
-
-        </div>
+        <section id="about">
+            <h2 class="about-heading">
+                Women in Technology
+            </h2>
+            <div class="container1">
+            <img class="home_pg_image" src="images/HomePage_img.jpg" id="aboutimage" alt="about image">
+            <div class="text-block">
+            <h1 class="heading-block">
+            Search women in tech
+            </h1>
+            <p class="blurb">
+            Be inspired 
+            </p>
+            <form id="search-form" action="/" method="GET">
+                <input name="name" id="name-query" type="text" />
+                <input type="submit" value="Search" />
+            </form>
+            </div>
+            </div>
+    </section>
+    
         
 
-        <form id="search-form" action="/" method="GET">
-            <input name="name" id="name-query" type="text" />
-            <input type="submit" value="Search" />
-        </form>
+        
 
         <div class="wrapper">
         <% people.forEach(person => { %>
