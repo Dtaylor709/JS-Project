@@ -54,7 +54,7 @@ export const createPersonFromController = function (req,res) {
     } else {
         user = null;
     }
-    res.render('newProfile', { person: personData, user:user })
+    res.render('newProfile', { user:user })
 }
 
 export const createPersonController = async function (req, res) {
