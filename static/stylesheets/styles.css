@@ -228,7 +228,53 @@ nav {
 
 /* //Home page biographies */
 
+/* publish page */
 
+.form-item label {
+    flex-basis: 150px;
+    font-size: 22px;
+}
+.form-item input,
+.form-item textarea {
+    flex-basis: 50%;
+    border: 2px solid lightgray;
+    
+}
+.form-item input:hover,
+.form-item textarea:hover {
+    border: 2px solid #9f5f80;
+}
+.form-item input,
+.form-item textarea {
+    border: 2px solid lightgray;
+    background-color: #FFF;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 7px;
+    padding: 15px;
+}
+
+.form-item button {
+    background-color: #9f5f80;
+    color: white;
+    padding: 5px;
+    font-size: 20px; }
+
+.form-item button:hover {
+    border: 2px solid #9f5f80;
+    background-color: #9f5f80;
+    color: #FFF;
+}
+.form-item button {
+    width: 250px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+
+
+
+/* //publish page */
 
 
 /* overall footer styling */
