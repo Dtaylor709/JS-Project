@@ -81,13 +81,14 @@ li {
     line-height: 22px;
     cursor: pointer;
     font-weight: 500;
+    color: black;
 }
 a, a:active, a:focus, a:hover {
     text-decoration: none;
 }
-a {
+/* a {
     color: #000;
-}
+} */
 
 /* //Overall header */
 
@@ -435,7 +436,7 @@ p {
     display: inline-block;
     overflow: hidden;
 }
-ul {
+.login_set {
     display: block;
     list-style-type: disc;
     margin-block-start: 1em;
@@ -609,8 +610,13 @@ ul {
 
 /* footer styling social media icons*/
 
-#footer_SocialMediaIcons {
-    margin-top: 38px;
+a {
+    color: black;
+}
+
+
+.footer_SocialMediaIcons {
+    margin-top: 120px;
     text-align: center;
 }
 
@@ -656,19 +662,19 @@ ul {
 /* //footer styling social media icons*/
 
 /* footer styling links*/
-.foot_menu {
+.foot_menu_footer {
     position: relative;
     padding-top: 29px;
     text-align: center;
 }
 
-.foot_menu li {
+.foot_menu_footer li {
     display: inline-block;
     height: 15px;
     vertical-align: top;
 }
 
-.foot_menu .bar {
+.foot_menu_footer .bar {
     margin: 0 16px;
 }
 
@@ -682,14 +688,16 @@ ul {
     vertical-align: top;
 }
 
-.foot_menu a {
+.foot_menu_footer a {
     font-size: 16px;
     line-height: 18px;
+    color: black;
 }
 
-a {
+
+/* a {
     color: #000;
-}
+} */
 
 a:-webkit-any-link {
     cursor: pointer;
