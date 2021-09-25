@@ -1,9 +1,13 @@
 <%- include("../partials/_head") -%>
-<img src=<%= person.photo %>>
-<h1><%= person.name %></h1>
-<h2><%= person.tagline %></h2>
-<h3><%= person.published_date %></h3>
-<p><%= person.bio %></p>
-    
+<div id="container" class="bg">
+    <div id="content" class="ct_box">
+        <div class="cont_box2">
+            <h2 class="profilename"><%= person.name %></h2>
+        <div class="inner_wrap">
+            <div class="profilename_area">
+        <img src=<%= person.photo %>>
+        <p class="sub_tit_heading"><strong><%= person.tagline %><br><%= person.published_date %></strong></p>
+        <p class="sub_tit_bio"><%= person.bio %></p>
+</div>
 
 <%- include("../partials/_footer") -%>

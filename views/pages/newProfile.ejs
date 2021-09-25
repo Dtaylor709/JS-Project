@@ -1,13 +1,22 @@
 <%- include("../partials/_head") -%>
-<h1>Create a new profile</h1>
+<div id="publish-title">
+    <h1>Create a new profile</h1>
+</div>
+<div class="instructional-text">
+    <p>Contribute to our women in technology community by publishing a story on a woman who inspires you!</p>
+</div>
 
 <form action="/profile" method="POST" enctype="multipart/form-data">
-    <input name="name" type="text" />
-    <input name="tagline" type="text" />
-    <textarea name="bio"></textarea>
-    <input name="photo" type="file" />
-    <input type="submit" value="Create" />
+    <div class="form-item">
+        <input name="name" type="text" placeholder="What is their name?"/>
+        <input name="tagline" type="text" placeholder="What is their job role?..."/>
+        <textarea name="bio" placeholder="Tell us their story..."></textarea>
+        <input name="photo" type="file" />
+        <input type="submit" value="Create" />
+    </div>
 </form>
+
+
 
 
 <%- include("../partials/_footer") -%>

@@ -1,17 +1,49 @@
 <%- include("../partials/_head") -%>
-    <h1>Login</h1>
-    <form action="/login" method="POST">
-        <div>
-            <label>Username:</label>
-            <input type="text" name="username" />
-        </div>
-        <div>
-            <label>Password:</label>
-            <input type="password" name="password" />
-        </div>
-        <div>
-            <input type="submit" value="Login" />
-        </div>
-    </form>
+    <div id="container" class="bg">
+        <div id="content" class="ct_box">
+            <div class="cont_box2">
+                <h2 class="tit">Login</h2>
+                <div class="inner_wrap">
+                    <div class="sign_up_area">
+                        <form action="/login" method="POST">
+                            <div>
+                                    <h3 id="emailAreaHeader" class="sub_tit">EMAIL ADDRESS*
+                                    </h3>
+                                    <div id="emailArea" class="input_area _inputArea">
+                                        <label for="email" class="placeholder _placeholder" style="display: none;"></label>
+                                        <input type="text" name="username" id="email" class="input_box _email" maxlength="64" placeholder="Enter Email address">
+                                    </div>
+                            <div>
+                                    <h3 class="sub_tit">PASSWORD *</h3>
+                                    <div class="input_area _inputArea">
+                                        <label for="pw" class="placeholder _placeholder" style="display: none;"></label>
+                                        <input type="password" name="password" id="pw" class="input_box _pw" maxlength="16" placeholder="Enter Password (6-16 characters)">
+                            </div>
+
+                            <input class="btn_type9" type="submit" value="Login" ></a>
+                            <div class="bg_line">
+                                <div class="inner">
+                                    <span class="line_txt">OR Log in with</span>
+                                </div>
+                            </div>
+                            <ul class="login_set">
+                            
+                                
+                                <li><a href="#" title="Login Facebook" class="btn_facebook _btnLoginSns NPI=a:fb,g:en_en" data-type="facebook">Login Facebook</a></li>
+                            
+                                
+                                <li><a href="#" title="Login Twitter" class="btn_twitter _btnLoginSns NPI=a:tw,g:en_en" data-type="twitter">Login Twitter</a></li>
+                                             
+                                
+                                <li><a href="#" title="Login Google" class="btn_google _btnLoginSns NPI=a:google,g:en_en" data-type="google">Login Google</a></li>
+                            
+                                
+                                <li><a href="#" title="Login Apple" class="btn_apple _btnLoginSns NPI=a:apple,g:en_en" data-type="apple">Login Apple</a></li>
+                            
+                              </ul>
+                              </div>
+                               </div>
+                        </form>
+
 
 <%- include("../partials/_footer") -%>

@@ -99,4 +99,3 @@ export const createPersonController = async function (req, res) {
           res.send('Error.');
     }
 };
-
