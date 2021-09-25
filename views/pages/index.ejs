@@ -4,29 +4,25 @@
         <section id="about">
             
             <div class="container1">
-            <img class="home_pg_image" src="images/HomePage_img.jpg" id="aboutimage" alt="about image">
+            <div>
+            <img class="home_pg_image" src="images/Group_photo.jpg" id="aboutimage" alt="about image"></div>
             <div><h2 class="about-heading">
                 Women in Technology
             </h2></div>
             <div class="text-block">
             <h1 class="heading-block">
-            Search women in tech
+            Search for your inspiration!
             </h1>
-            <p class="blurb">
-            Be inspired 
-            </p>
             <form id="search-form" action="/" method="GET">
-                <input name="name" id="name-query" type="text" />
-                <input type="submit" value="Search" />
+                <div class="input_area _inputArea">
+                    <input name="name" id="name-query" type="text" placeholder="Search by name"/>
+                    <input class="btn_type9" type="submit" value="Search" />
+                </div>
             </form>
             </div>
             </div>
     </section>
     
-        
-
-        
-
         <div class="wrapper">
         <% people.forEach(person => { %>
             <div class="wrapper_item"><a href="/profile/<%= person.id %>">
