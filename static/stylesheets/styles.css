@@ -112,11 +112,18 @@ nav {
     display: block;
 }
 
-.Navbar {
+.Navbar_logged_in {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+}
+
+.Navbar_logged_out {
     float: left;
-    padding: 40px 0 0 36px;
+    padding: 50px 0 0 36px;
     height: 60px;
     vertical-align: top;
+    padding-right: 40px;
 }
 
 .Navbar li {
@@ -125,7 +132,8 @@ nav {
     padding: 0 18px;
 }
 
-.log_in_out {display: inline-block;
+.log_in_out {
+    display: inline-block;
     width: 104px;
     height: 33px;
     border-radius: 17px;
@@ -151,7 +159,7 @@ nav {
     vertical-align: top;
     font-size: 14px;
     font-weight: 700;
-    color: #838383;
+    color: #61616186;
 }
 
 .create-account_button:hover {
@@ -219,16 +227,34 @@ nav {
     font-weight: bold;
     font-size: 3rem;
     text-align: center;
-    margin-top: 50px;
     color:white;
-    top: 80px;
+    top: 10px;
     right: 0;
+    padding-bottom: 30px;
   }
 
-  .heading-block {
+.heading-block {
     font-family: 'Roboto', sans-serif;  
     font-weight: bold;
+    color: white;
+    text-align: center;
   }
+
+.right_text {
+      text-align: center;
+      margin: 20px;
+  }
+
+#name-query {
+    padding: 15px;
+    border-color: rgb(118, 118, 118);
+    font-size: 17px;
+    }
+
+#search-form {
+  padding-bottom: 0%;
+}
+  
 
 /* Home image, title and search bar */
 

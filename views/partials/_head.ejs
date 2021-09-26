@@ -20,10 +20,12 @@
                         <li class="m02 "><a href="/contact" class="NPI=a:genre,g:en_en">Contact Us</a></li>
                   </ul>
 
-                  <div class="Navbar" id="TopNavbar">
+                  <div class="Navbar_logged_in" id="TopNavbar">
                         <% if (user !== null) { %>
-                              <p>You are logged in as <%= user.username %></p>
-                              <% } %>
+                        <p>You are logged in as <%= user.username %></p>
+                        <% } %>
+                        </div>
+                  <div class="Navbar_logged_out">
                         <% if (user !== null) { %>
                         <a href="/profile" class="publish"> 
                               <span class="material-icons">menu_book</span>Publish</a>
@@ -32,7 +34,7 @@
                         <a href="/login" class="log_in_out">Login</a>
                         <a href="/create-account" class="create-account_button">Signup</a>
                         <% } %>
-                        </div>
+                  </div>
             </div>
 
     </head>
