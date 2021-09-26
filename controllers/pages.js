@@ -57,3 +57,5 @@ export const privacypeopleController = async function (req,res) {
         user: user, 
     });
 };
+
+
