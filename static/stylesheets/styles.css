@@ -1,5 +1,6 @@
 body, html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -25,6 +26,8 @@ body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend,
 
 
 /* Overall header */
+
+
 #wrap.header_bdr #header {
     margin-bottom: -101px;
     border-bottom: 1px solid #eaeaea;
@@ -56,6 +59,7 @@ div {
     padding: 40px 0 0 36px;
     height: 60px;
     vertical-align: top;
+    margin-right: auto;
 }
 
 .lnb li:first-child {
@@ -183,14 +187,21 @@ nav {
 }
 
 .home_pg_image {
-    width: 65%;;
-    
+    width: 100%;
+    height: 100%;
 }
 
-/* .container1 {
-    position: relative;
-  } */
-  
+.home_pg_image_container {
+    width: 65%;
+    flex-shrink: 0;
+    align-self: stretch;
+    height: 100%;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+  }
   
   .text-block {
     position: absolute;
@@ -210,7 +221,6 @@ nav {
     text-align: center;
     margin-top: 50px;
     color:white;
-    position: absolute;
     top: 80px;
     right: 0;
   }
@@ -289,11 +299,17 @@ nav {
 }
 
 .profilename_area .sub_tit_heading {
-    padding: 33px 0 0;
-    font-size: 19px;
+    font-size: 25px;
     justify-content: right;
     font-weight: 500;
+    font-weight: bold;
 }
+
+.profilename_area .sub_tit_time {
+    font-weight: bold;
+    font-size: 15px;
+}
+
 
 .profile_photo {
     border-radius: 30px;
@@ -302,6 +318,7 @@ nav {
     background-repeat: repeat;
     padding: 20px;
     height: 250px;
+    margin-top: 30px;
   }
 
 /* // profile stories pages*/
@@ -391,12 +408,10 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-.cont_box2 .btn_type9[href] {
-    color: #fff;
-}
+
 .cont_box2 .btn_type9 {
     margin: 40px auto 0;
-    color: #535353;
+    color: white;
 }
 .btn_type9 {
     display: inline-block;
@@ -485,7 +500,7 @@ input {
     display: inline-block;
     text-align: start;
     appearance: auto;
-    cursor: text;
+    cursor: pointer;
     background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
     margin: 0em;
     padding: 1px 2px;
@@ -516,7 +531,7 @@ form {
 }
 .form-item input:hover,
 .form-item textarea:hover {
-    border: 2px solid #9f5f80;
+    border: 2px solid #432581;
 }
 .form-item input,
 .form-item textarea {
@@ -526,39 +541,25 @@ form {
     font-size: 18px;
     border-radius: 7px;
     padding: 15px;
+    width: 100%;
 }
-
-.form-item button {
-    background-color: #9f5f80;
-    color: white;
-    padding: 5px;
-    font-size: 20px; }
-
-.form-item button:hover {
-    border: 2px solid #9f5f80;
-    background-color: #9f5f80;
-    color: #FFF;
-}
-.form-item button {
-    width: 250px;
-    height: 50px;
-    border-radius: 30px;
-}
-
-
-
 
 /* //publish page */
 
 /* about page */
+.about_image {
+    width: 100vw;
+    height: auto;
+    max-width: none;
+    max-height: 100vh;
+    object-fit: contain;
+}
+
 .aboutus {
     width: 1000px;
     margin: 86px auto 92px;
     font-size: 17px;
-}
-#content {
-    position: relative;
-    padding: 10px 0 406px;
+    text-align: justify;
 }
 
 .aboutus h2, .es .aboutus h2 {
@@ -569,20 +570,17 @@ form {
     background-position: -208px -141px;
     width: 172px;
     margin-bottom: 51px;
-    overflow: hidden;
-    text-indent: 100%;
     white-space: nowrap;
+    font-size: 30px;
 }
 .aboutus p {
     margin-bottom: 72px;
     line-height: 1.76;
 }
-strong {
-    font-weight: bold;
-}
+
 .aboutus .tit_contacts {
     margin-bottom: 7px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.29;
     font-weight: 700;
 }
@@ -591,8 +589,6 @@ strong {
 }
 
 /* //about page */
-
-
 
 
 /* overall footer styling */
@@ -724,6 +720,7 @@ a:-webkit-any-link {
 .copyright {
     position: relative;
     padding-top: 16px;
+    padding-bottom: 25px;
     font-size: 14px;
     line-height: 16px;
     color: #c5c5c5;
@@ -766,13 +763,33 @@ p {
     color: #858585;
 }
 
-.terms_area h3 {
-    font-size: 28px;
+.terms_area h2 {
+    font-size: 30px;
     font-weight: 400;
     color: #000;
+    font-weight: bold;
+    padding-bottom: 15px;
 }
 .terms_area p {
     margin-top: 17px;
 }
 
 /* //PRIVACY PAGE */
+
+/* acknowledgements */
+
+.container3 {
+    position: relative;
+    text-align: center;
+    color: black;
+  }
+
+.center_text {
+position: absolute;
+top: 10%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 17px;
+}
+
+/* //ackowledgements */

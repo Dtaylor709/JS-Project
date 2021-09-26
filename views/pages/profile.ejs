@@ -7,7 +7,8 @@
             <div class="inner_wrap">
                 <div class="profilename_area">
             <img class="profile_photo" src=<%= person.photo %>>
-            <p class="sub_tit_heading"><strong><%= person.tagline %><br><%= person.published_date %></strong></p>
+            <p class="sub_tit_heading"><%= person.tagline %></p>
+            <p class="sub_tit_time"><%= new Date(person.published_date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }) %></p>
             <p class="sub_tit_bio"><%= person.bio %></p>
     </div>
 

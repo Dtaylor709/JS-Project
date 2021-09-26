@@ -6,8 +6,9 @@ import bcrypt from 'bcrypt';
 import connectPgSimple from 'connect-pg-simple';
 import dotenv from 'dotenv';
 import { pool } from './db.js';
-import peopleRouter from './routes/people.js'
-import userRouter from './routes/users.js'
+import peopleRouter from './routes/people.js';
+import userRouter from './routes/users.js';
+import pagesRouter from './routes/pages.js';
 
 dotenv.config();
 
@@ -82,5 +83,6 @@ app.listen(process.env.PORT || 3000, () => {
 
 app.use('/', peopleRouter)
 app.use('/', userRouter)
+app.use('/', pagesRouter)
 
 // 127.0.0.1:3000
