@@ -1,26 +1,47 @@
 <%- include("../partials/_head") -%>
-<div id="publish-title">
-    <h1>Create a new profile</h1>
-</div>
-<div class="instructional-text">
-    <p>Contribute to our women in technology community by publishing a story on a woman who inspires you!</p>
-</div>
 
-<form action="/profile" method="POST" enctype="multipart/form-data">
-    <div class="form-item">
-        <input name="name" type="text" placeholder="What is their name?"/>
-        <br>
-        <input name="tagline" type="text" placeholder="What is their job role?..."/>
-        <br>
-        <textarea name="bio" placeholder="Tell us their story..."></textarea>
-        <br>
-        <input name="photo" type="file" />
-        <br>
-        <input type="submit" value="Create" />
+    <div class="container3">
+        <img class="newprofile_image" src="images/NewProfile.jpg" id="newprofileimage" alt="new profile image">
+    <div class="middle_text">
+        <p>Contribute to our WITLY community by publishing a story on a woman who inspires you!</p>
     </div>
-</form>
+</div>
 
+<div id="container" class="bg">
+    <div id="content" class="ct_box">
+        <div class="cont_box2">
+            <h2 class="tit">Create a new profile</h2>
+            <div class="inner_wrap">
+                <div class="sign_up_area">
+                    <form action="/profile" method="POST" enctype="multipart/form-data">
+                        <div>
+                            <h3 id="nameAreaHeader" class="sub_tit">NAME*</h3>
+                        <div class="input_area _inputArea">
+                            <input name="name" type="text" class="input_box _name" placeholder="What is their name?"/>
+                        </div>
 
+                        <div>
+                            <h3 id="roleAreaHeader" class="sub_tit">JOB ROLE*</h3>
+                        <div class="input_area _inputArea">
+                            <input name="tagline" type="text" class="input_box _job role" placeholder="What is their job role?..."/>
+                        </div>
+                        
+                        <div>
+                            <h3 id="storyAreaHeader" class="sub_tit">STORY*</h3>    
+                            <div class="form-item">
+                                <textarea name="bio" class="input_box _story" placeholder="Tell us their story..."></textarea>
+                        </div>
+
+                        <div>
+                            <h3 id="roleAreaHeader" class="sub_tit">PROFILE PHOTO*</h3>
+                        <div class="input_area _inputArea">
+                            <input name="photo" class="input_box _file" type="file" />
+                        </div>
+
+                            <input class="btn_type9" type="submit" value="Create Profile Story" />
+                        </div>
+                    </form>
+                </div>
 
 
 <%- include("../partials/_footer") -%>
